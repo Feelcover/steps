@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <div className={styles.page}>
         <div className={styles.wrapper}>
-          <motion.div
+         {!isMobile &&  <motion.div
             transition={{
               delay: 1.5,
               ease: "linear",
@@ -29,7 +29,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
           >
             <h1 className={styles.page__title}>Зарабатывайте вместе с нами!</h1>
-          </motion.div>
+          </motion.div>}
           <div className={styles.container}>
             <motion.div
               transition={{
@@ -41,6 +41,17 @@ export default function Home() {
               animate={{ opacity: 1 }}
             >
               <main className={styles.page__main}>
+              {isMobile &&  <motion.div
+            transition={{
+              delay: 1.5,
+              ease: "linear",
+              duration: 0.5,
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            <h1 className={styles.page__title}>Зарабатывайте вместе с нами!</h1>
+          </motion.div>}
                 <motion.div
                   transition={{
                     delay: 1,
@@ -74,9 +85,20 @@ export default function Home() {
                 >
                   <Card marginTop={marginTopCards} persentCard />
                 </motion.div>
+                {isMobile && <motion.div
+              transition={{
+                delay: 1.7,
+                ease: "linear",
+                duration: 0.5,
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              <Button text="Стать партнером" marginTop={30} />
+            </motion.div>}
               </main>
             </motion.div>
-            <motion.div
+            {!isMobile && <motion.div
               transition={{
                 delay: 1.7,
                 ease: "linear",
@@ -86,7 +108,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
             >
               <Button text="Стать партнером" marginRight={191} />
-            </motion.div>
+            </motion.div>}
           </div>
         </div>
       </div>

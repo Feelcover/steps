@@ -19,6 +19,8 @@
     0px 0px 0px 4px rgba(91, 192, 20, 0.24);
   background: linear-gradient(180deg, rgb(93, 196, 22), rgb(54, 123, 5) 100%);
 
+  
+
   &:after {
     content: "";
     max-height: 48px;
@@ -72,6 +74,8 @@
     background: linear-gradient(0deg, rgb(81, 168, 20), rgb(54, 131, 0) 100%);
   }
 
+
+
   &__img {
     position: relative;
     display: block;
@@ -80,4 +84,5 @@
     background-image: url("/images/buttonIcon.svg");
     margin-right: 20px;
   }
+
 }

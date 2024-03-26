@@ -7,10 +7,10 @@
   @media screen and (max-width: 1130px) {
     box-sizing: border-box;
     overflow-x: hidden;
+    margin: 0 auto;
   }
 
-  .wrapper{
-
+  .wrapper {
     @media screen and (max-width: 1130px) {
       display: flex;
       flex-direction: column;
@@ -25,13 +25,6 @@
     flex-direction: column;
     align-items: flex-end;
     position: relative;
-    @media screen and (max-width: 1130px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      max-width: 360px;
-    }
 
 
     &::after {
@@ -47,7 +40,19 @@
       -webkit-animation-duration: 2.5s;
       animation-duration: 2.5s;
     }
+    @media screen and (max-width: 1130px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 360px;
+      &::after {
+        top: 731px;
+        left: 255px;
+        transform: rotate(90deg) scaleY(-1);
 
+      }
+    }
   }
   &__title {
     color: rgb(34, 40, 74);
@@ -59,6 +64,10 @@
     max-width: fit-content;
     margin: 0 0 40px;
     margin-left: 23px;
+    @media screen and (max-width: 1130px) {
+      max-width: 284px;
+      margin: 32px auto 72px;
+    }
   }
   &__main {
     display: flex;
@@ -88,22 +97,29 @@
       -webkit-animation-duration: 2.5s;
       animation-duration: 2.5s;
     }
+   
 
     @media screen and (max-width: 1130px) {
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       margin: 0;
       min-width: 367px;
       max-width: 336px;
-      min-height: 1352px;
+      min-height: 1220px;
       flex-direction: column;
       background: url("/images/backgroundMob.svg");
       background-repeat: no-repeat;
-      background-position: 28px 100px;
+      background-position: 28px 60px;
       background-size: 304px 1112px;
       border: 4px solid rgba(107, 125, 222, 0.24);
-border-radius: 28px;
-box-shadow: 0px 24px 48px 0px rgba(23, 43, 151, 0.72);
+      border-radius: 28px;
+      box-shadow: 0px 24px 48px 0px rgba(23, 43, 151, 0.72);
+      &::after {
+        top: 415px;
+        left: 253px;
+        transform: rotate(90deg) scaleY(-1);
+
+      }
     }
   }
 
@@ -118,4 +134,18 @@ box-shadow: 0px 24px 48px 0px rgba(23, 43, 151, 0.72);
       transform: translateY(0px);
     }
   }
+  @media screen and (max-width: 1130px) {
+  @keyframes open {
+    0% {
+      transform: rotate(90deg) scaleY(-1) translateX(-150px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: rotate(90deg) scaleY(-1) translateX(0px);
+      opacity: 1;
+    }
+  }
+}
+
 }
