@@ -1,11 +1,13 @@
-.app {
+.page {
   max-width: 1920px;
   margin: 40px auto;
   display: flex;
   justify-content: center;
-  .wrapper{
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
-
   &__title {
     color: rgb(34, 40, 74);
     font-family: "Roboto";
@@ -19,7 +21,7 @@
   &__main {
     display: flex;
     gap: 0 8px;
-    margin: 0;
+    margin: 0 0 64px;
     box-sizing: border-box;
     max-width: 1281px;
     max-height: 307px;
